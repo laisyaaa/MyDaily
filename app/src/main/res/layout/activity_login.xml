@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F8FD"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <!-- Judul Aplikasi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MyDaily"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#8673B5"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Teks Selamat Datang -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang!"
+            android:textSize="20sp"
+            android:textColor="#55516B"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Input Username -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Masukkan Username"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:padding="12dp"
+            android:textColor="#55516B"
+            android:textColorHint="#938BA7"
+            android:backgroundTint="#B8A9D9"/>
+
+        <!-- Input Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Masukkan Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#55516B"
+            android:textColorHint="#938BA7"
+            android:backgroundTint="#B8A9D9"/>
+
+        <!-- Tombol Login -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MASUK"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#42365B"
+            android:backgroundTint="#D9CCF1"
+            android:layout_marginTop="28dp"/>
+
+        <!-- Keterangan Aplikasi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi Catatan Harian"
+            android:textSize="13sp"
+            android:textColor="#938BA7"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

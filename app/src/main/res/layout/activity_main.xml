@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- KONTEN UTAMA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/pastel_bg">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@color/pastel_primary">
+
+            <TextView
+                android:id="@+id/btnMenu"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="☰"
+                android:textSize="27sp"
+                android:textColor="@color/white"
+                android:contentDescription="Buka sidebar"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/txtJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beranda"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <!-- AREA HALAMAN -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- BERANDA -->
+                <LinearLayout
+                    android:id="@+id/pageBeranda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtWelcome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Halo, User!"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Selamat datang di MyDaily."
+                        android:textSize="15sp"
+                        android:textColor="#938BA7"
+                        android:layout_marginTop="6dp"/>
+
+                    <!-- INFORMASI -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@color/pastel_lilac">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan Harian"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#65558F"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kelola semua kegiatan dan catatanmu dalam satu aplikasi."
+                            android:textSize="14sp"
+                            android:textColor="@color/pastel_text"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- RINGKASAN -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ringkasan Catatan"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"
+                        android:layout_marginTop="28dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:id="@+id/txtTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="95dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0\nTotal"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="#55516B"
+                            android:background="#EDE7F6"/>
+
+                        <TextView
+                            android:id="@+id/txtDone"
+                            android:layout_width="0dp"
+                            android:layout_height="95dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0\nDone"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="#456A51"
+                            android:background="#E0EEDC"
+                            android:layout_marginStart="8dp"/>
+
+                        <TextView
+                            android:id="@+id/txtBelum"
+                            android:layout_width="0dp"
+                            android:layout_height="95dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0\nBelum"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="#9C6582"
+                            android:background="#FCE6EF"
+                            android:layout_marginStart="8dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Catatan Terakhir"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"
+                        android:layout_marginTop="28dp"/>
+
+                    <TextView
+                        android:id="@+id/txtCatatanTerakhir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Belum ada catatan."
+                        android:textSize="15sp"
+                        android:textColor="@color/pastel_text"
+                        android:padding="20dp"
+                        android:background="@color/pastel_card"
+                        android:layout_marginTop="12dp"/>
+
+                </LinearLayout>
+
+                <!-- HALAMAN CATATAN -->
+                <LinearLayout
+                    android:id="@+id/pageCatatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Catatan Saya"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tambah dan kelola aktivitas harianmu."
+                        android:textSize="14sp"
+                        android:textColor="#938BA7"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- FORM CATATAN -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/pastel_card"
+                        android:padding="16dp"
+                        android:layout_marginTop="24dp">
+
+                        <TextView
+                            android:id="@+id/txtFormJudul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tambah Catatan Baru"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#8673B5"/>
+
+                        <EditText
+                            android:id="@+id/etJudulCatatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Judul catatan"
+                            android:singleLine="true"
+                            android:textColor="@color/pastel_text"
+                            android:backgroundTint="@color/pastel_primary"
+                            android:layout_marginTop="14dp"/>
+
+                        <EditText
+                            android:id="@+id/etIsiCatatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="125dp"
+                            android:hint="Tulis isi catatan..."
+                            android:inputType="textMultiLine"
+                            android:gravity="top"
+                            android:padding="12dp"
+                            android:textColor="@color/pastel_text"
+                            android:backgroundTint="@color/pastel_primary"
+                            android:layout_marginTop="12dp"/>
+
+                        <CheckBox
+                            android:id="@+id/cbStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tandai sudah selesai (Done)"
+                            android:textColor="@color/pastel_text"
+                            android:buttonTint="@color/pastel_primary"
+                            android:layout_marginTop="12dp"/>
+
+                        <Button
+                            android:id="@+id/btnSimpan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SIMPAN CATATAN"
+                            android:textColor="#42365B"
+                            android:backgroundTint="@color/pastel_button"
+                            android:layout_marginTop="15dp"/>
+
+                        <Button
+                            android:id="@+id/btnBatalEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BATAL EDIT"
+                            android:textColor="#65558F"
+                            android:backgroundTint="@color/pastel_lilac"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <!-- DAFTAR CATATAN -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daftar Catatan"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"
+                        android:layout_marginTop="28dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/containerCatatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"/>
+
+                </LinearLayout>
+
+                <!-- HALAMAN PROFIL -->
+                <LinearLayout
+                    android:id="@+id/pageProfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Profil Saya"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kelola informasi akun MyDaily."
+                        android:textColor="#938BA7"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/txtProfilNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Pengguna"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#8673B5"
+                        android:layout_marginTop="28dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Lengkap"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"
+                        android:layout_marginTop="25dp"/>
+
+                    <EditText
+                        android:id="@+id/etProfilNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Masukkan nama"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"
+                        android:textColor="@color/pastel_text"
+                        android:backgroundTint="@color/pastel_primary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"
+                        android:layout_marginTop="20dp"/>
+
+                    <EditText
+                        android:id="@+id/etProfilEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Masukkan email"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/pastel_text"
+                        android:backgroundTint="@color/pastel_primary"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bio"
+                        android:textStyle="bold"
+                        android:textColor="@color/pastel_text"
+                        android:layout_marginTop="20dp"/>
+
+                    <EditText
+                        android:id="@+id/etProfilBio"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:hint="Tulis bio singkat..."
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:padding="12dp"
+                        android:textColor="@color/pastel_text"
+                        android:backgroundTint="@color/pastel_primary"/>
+
+                    <Button
+                        android:id="@+id/btnSimpanProfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SIMPAN PROFIL"
+                        android:textColor="#42365B"
+                        android:backgroundTint="@color/pastel_button"
+                        android:layout_marginTop="22dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- SIDEBAR KIRI -->
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/pastel_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:padding="24dp"
+            android:background="@color/pastel_primary">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MyDaily"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menu Navigasi"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/menuBeranda"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="BERANDA"
+            android:textColor="@color/pastel_text"
+            android:backgroundTint="@color/pastel_card"/>
+
+        <Button
+            android:id="@+id/menuCatatan"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="CATATAN SAYA"
+            android:textColor="@color/pastel_text"
+            android:backgroundTint="@color/pastel_card"/>
+
+        <Button
+            android:id="@+id/menuProfil"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="PROFIL"
+            android:textColor="@color/pastel_text"
+            android:backgroundTint="@color/pastel_card"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/pastel_lilac"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/menuLogout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="LOGOUT"
+            android:textColor="#BD6B91"
+            android:backgroundTint="@color/pastel_card"/>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
